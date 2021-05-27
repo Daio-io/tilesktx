@@ -4,8 +4,12 @@ import androidx.wear.tiles.builders.LayoutElementBuilders
 import androidx.wear.tiles.builders.TileBuilders
 import androidx.wear.tiles.builders.TimelineBuilders
 
-fun TileBuilders.Tile.Builder.timeline(builderFunc: TimelineBuilders.Timeline.Builder.() -> TimelineBuilders.Timeline.Builder): TileBuilders.Tile.Builder {
-    return setTimeline(builderFunc(TimelineBuilders.Timeline.builder()))
+fun tile(builderFunc: TileBuilders.Tile.Builder.() -> TileBuilders.Tile): TileBuilders.Tile {
+    return TileBuilders.Tile.builder().builderFunc()
+}
+
+fun TileBuilders.Tile.Builder.timeline(builderFunc: TimelineBuilders.Timeline.Builder.() -> TimelineBuilders.Timeline.Builder): TileBuilders.Tile {
+    return setTimeline(builderFunc(TimelineBuilders.Timeline.builder())).build()
 }
 
 fun TimelineBuilders.Timeline.Builder.timelineEntry(builderFunc: TimelineBuilders.TimelineEntry.Builder.() -> TimelineBuilders.TimelineEntry.Builder): TimelineBuilders.Timeline.Builder {
