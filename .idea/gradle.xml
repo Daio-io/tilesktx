@@ -12,7 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/tilesktx" />
+            <option value="$PROJECT_DIR$/weartilesktx" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
