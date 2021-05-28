@@ -19,18 +19,18 @@ class DemoTileService : TileProviderService() {
         return scope.future {
             tile {
                 setResourcesVersion(RESOURCES_VERSION)
-                    .timeline {
-                        timelineEntry {
-                            setLayout {
-                                root {
-                                    column {
-                                        addContent(text { setText("Hello") })
-                                        addContent(text { setText("World!") })
-                                    }
+                timeline {
+                    timelineEntry {
+                        setLayout {
+                            root {
+                                column {
+                                    addContent(text { setText("Hello") })
+                                    addContent(text { setText("World!") })
                                 }
                             }
                         }
                     }
+                }
             }
         }
     }
